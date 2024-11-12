@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>mx.gob.banobras.bitcen</groupId>
+		<artifactId>banobras-bitcen-business</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>banobras-bitcen-catalogos-business</artifactId>
+	<name>banobras-bitcen-catalogos-business</name>
+	<description>Módulo que contiene los servicios para la funcionalidad de las
+		bitacoras catalogos</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>mx.gob.banobras.bitcen</groupId>
+			<artifactId>banobras-bitcen-common-business</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>mx.gob.banobras.bitcen</groupId>
+			<artifactId>banobras-bitcen-token-business</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

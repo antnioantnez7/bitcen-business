@@ -1,0 +1,47 @@
+{"properties": [
+  {
+    "name": "app.url.token.valid",
+    "type": "java.lang.String",
+    "description": "A description for 'app.url.token.valid'"
+  },
+  {
+    "name": "app.url.persistence.usuarios",
+    "type": "java.lang.String",
+    "description": "A description for 'app.url.persistence.usuarios'"
+  },
+  {
+    "name": "app.url.persistence.productos",
+    "type": "java.lang.String",
+    "description": "A description for 'app.url.persistence.productos'"
+  },
+  {
+    "name": "app.bypass.cert",
+    "type": "java.lang.String",
+    "description": "A description for 'app.bypass.cert'"
+  },
+  {
+    "name": "app.file.filejks",
+    "type": "java.lang.String",
+    "description": "A description for 'app.file.filejks'"
+  },
+  {
+    "name": "app.cert.jks.password",
+    "type": "java.lang.String",
+    "description": "A description for 'app.cert.jks.password'"
+  },
+  {
+    "name": "app.url.persistence.accesos",
+    "type": "java.lang.String",
+    "description": "A description for 'app.url.persistence.accesos'"
+  },
+  {
+    "name": "app.url.persistence.operaciones",
+    "type": "java.lang.String",
+    "description": "A description for 'app.url.persistence.operaciones'"
+  },
+  {
+    "name": "app.url.persistence.catalogos",
+    "type": "java.lang.String",
+    "description": "A description for 'app.url.persistence.catalogos'"
+  }
+]}

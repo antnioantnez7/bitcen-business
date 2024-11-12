@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j2>
+<Configuration>
+  <Properties>
+	<Property name="LOGS_DIRECTORY">C:/Workspaces/logs/bitcen/</Property>
+	<Property name="OLDS_LOGS_DIRECTORY">C:/Workspaces/logs/bitcen/logs/olds</Property>
+	<Property name="TRACE_FILE">bitcen-business-trace</Property>
+	<Property name="ERROR_FILE">bitcen-business-error</Property>
+	<Property name="LOG_PATTERN">
+	  %d{dd/MM/yyyy HH:mm:ss.SSS} [%thread] %X - %-5level %C{1}-%M:%4L - %msg%n
+	</Property>
+</Properties>
+<Appenders>
+  <Console name="Console" target="SYSTEM_OUT" follow="true">
+    <PatternLayout pattern="${LOG_PATTERN}"/>
+  </Console>
+  <RollingFile name="infoLog" fileName="${LOGS_DIRECTORY}/${TRACE_FILE}.log" 
+               filePattern="${OLDS_LOGS_DIRECTORY}/${TRACE_FILE}-%d{yyyy-MM-dd}-%i.log" >
+    <LevelRangeFilter minLevel="ERROR" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+    <PatternLayout pattern="${LOG_PATTERN}"/>
+    <Policies>
+	  <SizeBasedTriggeringPolicy size="100MB" />
+    </Policies>
+    <DefaultRolloverStrategy max="10"/>
+  </RollingFile>
+  <RollingFile name="errorLog" fileName="${LOGS_DIRECTORY}/${ERROR_FILE}.log" 
+	           filePattern="${LOGS_DIRECTORY}/${ERROR_FILE}-%d{yyyy-MM-dd}-%i.log" >
+    <LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+	<PatternLayout pattern="${LOG_PATTERN}"/>
+	<Policies>
+	  <SizeBasedTriggeringPolicy size="100MB" />
+	</Policies>
+	<DefaultRolloverStrategy max="10"/>
+  </RollingFile>
+  </Appenders>
+  <Loggers>
+    <Logger name="mx.gob.banobras.bitcen" additivity="false">
+      <AppenderRef ref="infoLog"  />
+      <AppenderRef ref="errorLog" />
+      <AppenderRef ref="Console"  />
+    </Logger>
+    <Root level="info">
+      <AppenderRef ref="infoLog" />
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
